@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@drawable/bg_dialog"
+        android:layout_width="@dimen/update_app_dialog_width"
+        android:layout_height="wrap_content"
+        tools:context=".ui.UpdateAppActivity">
+
+    <TextView
+            android:id="@+id/update_app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/update_app_title_text_size"
+            android:textColor="@color/update_app_black"
+            android:layout_marginTop="@dimen/update_app_margin"
+            android:layout_marginStart="@dimen/update_app_margin"
+            android:layout_marginEnd="@dimen/update_app_margin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+            android:id="@+id/update_app_new_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/update_app_message_text_size"
+            android:textColor="@color/update_app_black"
+            android:layout_marginStart="@dimen/update_app_margin"
+            android:layout_marginTop="@dimen/update_app_padding"
+            app:layout_constraintTop_toBottomOf="@+id/update_app_title"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+            android:id="@+id/update_app_apk_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/update_app_message_text_size"
+            android:textColor="@color/update_app_black"
+            android:layout_marginStart="@dimen/update_app_margin"
+            app:layout_constraintTop_toBottomOf="@+id/update_app_new_version"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+            android:id="@+id/update_app_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/update_app_message_text_size"
+            android:textColor="@color/update_app_black"
+            android:layout_marginTop="@dimen/update_app_padding"
+            android:layout_marginStart="@dimen/update_app_margin"
+            app:layout_constraintTop_toBottomOf="@+id/update_app_apk_size"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <ProgressBar
+            android:id="@+id/update_app_download_progress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/update_app_padding"
+            android:layout_marginStart="@dimen/update_app_padding"
+            android:layout_marginEnd="@dimen/update_app_padding"
+            app:layout_constraintTop_toBottomOf="@+id/update_app_message"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:progressTint="@color/update_app_blue"/>
+
+    <View
+            android:id="@+id/update_app_view_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/update_app_line_width"
+            android:background="@color/update_app_grey"
+            android:layout_marginTop="@dimen/update_app_padding"
+            app:layout_constraintTop_toBottomOf="@+id/update_app_download_progress"/>
+
+    <View
+            android:id="@+id/update_app_view_vertical"
+            android:layout_width="@dimen/update_app_line_width"
+            android:layout_height="@dimen/update_app_button_height"
+            android:background="@color/update_app_grey"
+            android:layout_marginEnd="@dimen/update_app_margin"
+            android:layout_marginStart="@dimen/update_app_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/update_app_view_horizontal"/>
+
+    <TextView
+            android:text="@string/update_app_button_cancel"
+            android:id="@+id/update_app_cancel"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:textSize="@dimen/update_app_button_text_size"
+            android:textColor="@color/update_app_blue"
+            app:layout_constraintTop_toBottomOf="@+id/update_app_view_horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/update_app_view_vertical"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+            android:text="@string/update_app_button_allow"
+            android:id="@+id/update_app_allow"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:textSize="@dimen/update_app_button_text_size"
+            android:textColor="@color/update_app_blue"
+            app:layout_constraintTop_toBottomOf="@+id/update_app_view_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/update_app_view_vertical"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

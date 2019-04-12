@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">UpdateApp</string>
+
+    <string name="update_app_title">应用更新</string>
+    <string name="update_app_new_version">版本：</string>
+    <string name="update_app_apk_size">大小：</string>
+    <string name="update_app_message">详情：\n</string>
+
+    <string name="update_app_button_allow">升级</string>
+    <string name="update_app_button_cancel">取消</string>
+
+    <string name="update_app_notification_channel">下载内容</string>
+</resources>
